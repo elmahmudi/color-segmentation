@@ -1,25 +1,50 @@
-# color-segmentation
+# Image Segmentation Using Detectron2 and YOLOv8
 
-Image Segmentation Using Color Spaces in OpenCV + Python
+This project demonstrates image segmentation using two different frameworks: Detectron2 and YOLOv8. It covers steps from dataset
+preparation to model training, inference, and evaluation.
 
-#### Segmentation leukocytes or White Blood Cell(WBC)
+# Build image segmentation using Detectron2 
+You need to follow the instructions provided in Detectron2 Segmentation.ipynb
+1. **Install Detectron2**
 
-<p align="center">
-  <img width="500" height="200" src="https://miro.medium.com/max/1280/1*FhqsBBwpFML74TlQJ9LeuA.png">
-</p>
+2. **Create Annotations**:
+    - Annotate your images in COCO JSON format using tools like [MakeSense.ai](https://www.makesense.ai/).
+    
+3. **Set Directories**:
+    - Define paths for training and validation images and their respective JSON annotation files.
+4. **Configure and Train Model**:
+    - Configure the model settings.
+    - Initiate the training process.
 
-#### Segmentation tennis ball
+5. **Inference and Evaluation**:
+    - Load the trained model for inference.
+    - Visualize the segmentation results.
+---
 
-<p align="center">
-  <img width="500" height="180" src="https://miro.medium.com/max/1280/1*aJOHKDX6yUb6KtqSizHU4Q.png">
-</p>
+# Build image segmentation using Yolo v8 
 
+You need to follow the instructions provided in YOLO V8 Segmentation.ipynb
 
-## Code
+1. **Prepare Dataset**:
+    - Annotate your images using tools like [MakeSense.ai](https://www.makesense.ai/) or [Roboflow](https://roboflow.com/) and convert annotations to YOLO format.
 
-The main code is [color_segment.py](https://github.com/offsouza/color-segmentation/blob/master/color_segment.py)
-  
- ## Medium
- 
- https://medium.com/@offsouza/segmentando-objetos-pela-cor-opencv-487d5181b473
- 
+2. **Install Required Libraries**:
+    - Install the `ultralytics` package and other necessary libraries.
+
+3. **Import Libraries**:
+    - Import necessary libraries including YOLOv8 and GPU utilities.
+
+4. **Model Setup**:
+    - Load pre-trained YOLOv8 models.
+    - Configure the paths for your dataset and results.
+5. **Train Model**:
+    - Configure training settings.
+    - Train your model using the uploaded dataset.
+
+6. **Inference and Evaluation**:
+    - Load the trained model for inference.
+    - Perform segmentation on new images and visualize the results.
+
+7. **Predeict masks for images**:
+    - Folder of multiple images.
+    - Extract masks and save them.
